@@ -153,7 +153,99 @@ Base64 Online Converter is very unique tool to encode Base64 data</p>
      data-full-width-responsive="true"></ins><script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script><h2 class='hidden'>Highlighted Code:</h2>
-            <pre id='highlightedResult'><code><span class="cm">/* ================= Supported layout/pattern: ================= */</span></footer>
+            <pre id='highlightedResult'><code><span class="cm">/* ================= Supported layout/pattern: ================= */</span>
+
+<span class="cm">/* -------- [1]. CSS Compressor -------- */</span>
+
+<span class="cm">/* a. Normal */</span>
+#foo<span class="pn">{</span><span class="pr">margin</span><span class="pn">:</span><span class="vl">0</span><span class="pn">;</span><span class="pr">padding</span><span class="pn">:</span><span class="vl">0</span><span class="pn">}</span> <span class="cm">/* comment */</span>
+#foo:focus<span class="pn">{</span><span class="pr">outline</span><span class="pn">:</span><span class="vl">none</span><span class="pn">}</span>
+
+<span class="cm">/* b. Strip all comments */</span>
+#foo<span class="pn">{</span><span class="pr">margin</span><span class="pn">:</span><span class="vl">0</span><span class="pn">;</span><span class="pr">padding</span><span class="pn">:</span><span class="vl">0</span><span class="pn">}</span>
+#foo:focus<span class="pn">{</span><span class="pr">outline</span><span class="pn">:</span><span class="vl">none</span><span class="pn">}</span>
+
+<span class="cm">/* c. Super compact */</span>
+#foo<span class="pn">{</span><span class="pr">margin</span><span class="pn">:</span><span class="vl">0</span><span class="pn">;</span><span class="pr">padding</span><span class="pn">:</span><span class="vl">0</span><span class="pn">}</span>#foo:focus<span class="pn">{</span><span class="pr">outline</span><span class="pn">:</span><span class="vl">none</span><span class="pn">}</span>
+
+<span class="cm">/* d. Keep indentation inside `@query <span class="pn">{}</span>` */</span>
+#foo<span class="pn">{</span><span class="pr">margin</span><span class="pn">:</span><span class="vl">0</span><span class="pn">;</span><span class="pr">padding</span><span class="pn">:</span><span class="vl">0</span><span class="pn">}</span>#foo:focus<span class="pn">{</span><span class="pr">outline</span><span class="pn">:</span><span class="vl">none</span><span class="pn">}</span>
+#foo<span class="pn">{</span><span class="pr">margin</span><span class="pn">:</span><span class="vl">0</span><span class="pn">;</span><span class="pr">padding</span><span class="pn">:</span><span class="vl">0</span><span class="pn">}</span>#foo:focus<span class="pn">{</span><span class="pr">outline</span><span class="pn">:</span><span class="vl">none</span><span class="pn">}</span>
+@media screen and (max-width:400px)<span class="pn">{</span>
+  #foo<span class="pn">{</span><span class="pr">margin</span><span class="pn">:</span><span class="vl">0</span><span class="pn">;</span><span class="pr">padding</span><span class="pn">:</span><span class="vl">0</span><span class="pn">}</span>#foo:focus<span class="pn">{</span><span class="pr">outline</span><span class="pn">:</span><span class="vl">none</span><span class="pn">}</span>
+  #foo<span class="pn">{</span><span class="pr">margin</span><span class="pn">:</span><span class="vl">0</span><span class="pn">;</span><span class="pr">padding</span><span class="pn">:</span><span class="vl">0</span><span class="pn">}</span>#foo:focus<span class="pn">{</span><span class="pr">outline</span><span class="pn">:</span><span class="vl">none</span><span class="pn">}</span>
+}
+
+
+<span class="cm">/* -------- [2]. CSS Beautifier -------- */</span>
+
+<span class="cm">/* a. Normal */</span>
+#foo <span class="pn">{</span><span class="pr">
+  margin</span><span class="pn">:</span><span class="vl">0</span><span class="pn">;</span>
+<span class="pr">  padding</span><span class="pn">:</span><span class="vl">0</span><span class="pn">;</span>
+<span class="pn">}</span>
+
+#foo:focus <span class="pn">{</span><span class="pr">
+  outline</span><span class="pn">:</span><span class="vl">none</span><span class="pn">;</span>
+<span class="pn">}</span>
+
+<span class="cm">/* b. Replace double space indentation with a tab character or 4 spaces */</span>
+#tab-character <span class="pn">{</span><span class="pr">
+	margin</span><span class="pn">:</span><span class="vl">0</span><span class="pn">;</span>
+<span class="pr">	padding</span><span class="pn">:</span><span class="vl">0</span><span class="pn">;</span>
+<span class="pn">}</span>
+
+#four-space <span class="pn">{</span><span class="pr">
+    outline</span><span class="pn">:</span><span class="vl">none</span><span class="pn">;</span>
+<span class="pn">}</span>
+
+<span class="cm">/* c. Break multiple selector */</span>
+#foo,
+#bar,
+.walaaa <span class="pn">{</span><span class="pr">
+  margin</span><span class="pn">:</span><span class="vl">0</span><span class="pn">;</span>
+<span class="pr">  padding</span><span class="pn">:</span><span class="vl">0</span><span class="pn">;</span>
+<span class="pn">}</span>
+
+<span class="cm">/* d. Space after `:` and `,` */</span>
+#foo <span class="pn">{</span><span class="pr">
+  margin</span><span class="pn">:</span><span class="vl"> 0 auto</span><span class="pn">;</span>
+<span class="pr">  background-image</span><span class="pn">:</span><span class="vl"> linear-gradient<span class="pn">(</span>top<span class="pn">,</span> #333<span class="pn">,</span> #555<span class="pn">)</span></span><span class="pn">;</span>
+<span class="pr">  color</span><span class="pn">:</span><span class="vl"> rgba<span class="pn">(</span>0<span class="pn">,</span> 0<span class="pn">,</span> 0<span class="pn">,</span> .4<span class="pn">)</span></span><span class="pn">;</span>
+<span class="pn">}</span>
+
+<span class="cm">/* e. Inline bracket for single property */</span>
+#foo .bg <span class="pn">{</span><span class="pr">
+  position</span><span class="pn">:</span><span class="vl">absolute</span><span class="pn">;</span>
+<span class="pr">  top</span><span class="pn">:</span><span class="vl">0</span><span class="pn">;</span>
+<span class="pr">  right</span><span class="pn">:</span><span class="vl">0</span><span class="pn">;</span>
+<span class="pr">  bottom</span><span class="pn">:</span><span class="vl">0</span><span class="pn">;</span>
+<span class="pr">  left</span><span class="pn">:</span><span class="vl">0</span><span class="pn">;</span>
+<span class="pr">  background</span><span class="pn">:</span><span class="vl">white url<span class="pn">(</span><span class="st">'img/bg-image.png'</span><span class="pn">)</span> no-repeat 0 0</span><span class="pn">;</span>
+<span class="pn">}</span>
+
+#foo .bg-1 <span class="pn">{</span><span class="pr">background-position</span><span class="pn">:</span><span class="vl">0 0</span><span class="pn">;}</span>
+#foo .bg-2 <span class="pn">{</span><span class="pr">background-position</span><span class="pn">:</span><span class="vl">100% 0</span><span class="pn">;}</span>
+#foo .bg-3 <span class="pn">{</span><span class="pr">background-position</span><span class="pn">:</span><span class="vl">100% 100%</span><span class="pn">;}</span>
+#foo .bg-4 <span class="pn">{</span><span class="pr">background-position</span><span class="pn">:</span><span class="vl">0 100%</span><span class="pn">;}</span>
+
+<span class="cm">/* f. Remove the last semicolon in single property */</span>
+#foo .bg <span class="pn">{</span><span class="pr">
+  position</span><span class="pn">:</span><span class="vl">absolute</span><span class="pn">;</span>
+<span class="pr">  top</span><span class="pn">:</span><span class="vl">0</span><span class="pn">;</span>
+<span class="pr">  right</span><span class="pn">:</span><span class="vl">0</span><span class="pn">;</span>
+<span class="pr">  bottom</span><span class="pn">:</span><span class="vl">0</span><span class="pn">;</span>
+<span class="pr">  left</span><span class="pn">:</span><span class="vl">0</span><span class="pn">;</span>
+<span class="pr">  background</span><span class="pn">:</span><span class="vl">white url<span class="pn">(</span><span class="st">'img/bg-image.png'</span><span class="pn">)</span> no-repeat 0 0</span><span class="pn">;</span>
+<span class="pn">}</span>
+
+#foo .bg-1 <span class="pn">{</span><span class="pr">background-position</span><span class="pn">:</span><span class="vl">0 0</span><span class="pn">}</span>
+#foo .bg-2 <span class="pn">{</span><span class="pr">background-position</span><span class="pn">:</span><span class="vl">100% 0</span><span class="pn">}</span>
+#foo .bg-3 <span class="pn">{</span><span class="pr">background-position</span><span class="pn">:</span><span class="vl">100% 100%</span><span class="pn">}</span>
+#foo .bg-4 <span class="pn">{</span><span class="pr">background-position</span><span class="pn">:</span><span class="vl">0 100%</span><span class="pn">}</span>
+
+<span class="cm">/* g. Inline layout mode */</span>
+#foo .bg <span class="pn">{</span><span class="pr"> position</span><span class="pn">:</span><span class="vl">absolute</span><span class="pn">;</span><span class="pr"> top</span><span class="pn">:</span><span class="vl">0</span><span class="pn">;</span><span class="pr"> right</span><span class="pn">:</span><span class="vl">0</span><span class="pn">;</span><span class="pr"> bottom</span><span class="pn">:</span><span class="vl">0</span><span class="pn">;</span><span class="pr"> left</span><span class="pn">:</span><span class="vl">0</span><span class="pn">;</span><span class="pr"> background</span><span class="pn">:</span><span class="vl">white url<span class="pn">(</span><span class="st">'img/bg-image.png'</span><span class="pn">)</span> no-repeat 0 0</span><span class="pn">;</span> <span class="pn">}</span></code></pre></footer>
 		</div>
 
     <script>function get(e){return document.getElementById(e)}var hc=get("highlightCode"),sa=get("stripAllComment"),sc=get("superCompact"),cm=get("keepLastComma"),bi=get("betterIndentation"),bs=get("breakSelector"),tt=get("toTab"),to=get("tabOpt").getElementsByTagName("input"),sb=get("spaceBetween"),ip=get("inlineSingleProp"),rs=get("removeLastSemicolon"),il=get("inlineLayout"),si=get("singleBreak"),hr=get("highlightedResult"),rt=document.getElementsByTagName("h2")[1];function highlightCode(e){if(hc.checked){var c=e.innerHTML;c=(c=(c=(c=c.replace(/\{([\s\S]+?)\}/g,function(e){return e.replace(/\'(.*?)\'/g,"<span class='st'>'$1'</span>").replace(/\"(.*?)\"/g,"<span class='st'>\"$1\"</span>").replace(/(\{|\n|;)?(.[^\{]*?):(.[^\{]*?)(;|\})/g,"$1<span class='pr'>$2</span>:<span class='vl'>$3</span>$4").replace(/<span class='pr'>\{/g,"{<span class='pr'>")})).replace(/&lt;(.*?)('|")(.*?)('|")&gt;/g,function(e){return e.replace(/'(.*?)'/g,"<span class='vl'>'$1'</span>").replace(/"(.*?)"/g,"<span class='vl'>\"$1\"</span>")})).replace(/\{([\s\S]+?)\}/g,function(e){return e.replace(/([\(\)\{\}\[\]\:\;\,]+)/g,"<span class='pn'>$1</span>").replace(/\!important/gi,"<span class='im'>!important</span>")})).replace(/\/\*([\w\W]+?)\*\//gm,"<span class='cm'>/*$1*/</span>"),e.innerHTML="<code>"+c+"</code>",hr.style.display="block",rt.style.display="block"}else hr.style.display="none",rt.style.display="none"}function compressCSS(e){var c=get(e),n=/@(media|-w|-m|-o|keyframes|page)(.*?)\{([\s\S]+?)?\}\}/gi,a=c.value,t=a.length;a=(a=sa.checked||sc.checked?a.replace(/\/\*[\w\W]*?\*\//gm,""):a.replace(/(\n+)?(\/\*[\w\W]*?\*\/)(\n+)?/gm,"\n$2\n")).replace(/([\n\r\t\s ]+)?([\,\:\;\{\}]+?)([\n\r\t\s ]+)?/g,"$2"),a=sc.checked?a:a.replace(/\}(?!\})/g,"}\n"),a=bi.checked?a.replace(n,function(e){return e.replace(/\n+/g,"\n  ")}):a.replace(n,function(e){return e.replace(/\n+/g,"")}),a=bi.checked&&!sc.checked?a.replace(/\}\}/g,"}\n}"):a,a=bi.checked&&!sc.checked?a.replace(/@(media|-w|-m|-o|keyframes)(.*?)\{/g,"@$1$2{\n  "):a,a=(a=(a=(a=(a=cm.checked?a.replace(/;\}/g,"}"):a.replace(/\}/g,";}").replace(/;+\}/g,";}").replace(/\};\}/g,"}}")).replace(/\:0(px|em|pt)/gi,":0")).replace(/ 0(px|em|pt)/gi," 0")).replace(/\s+\!important/gi,"!important")).replace(/(^\n+|\n+$)/,""),c.value=a,hr.innerHTML="/* "+(t-a.length)+" of "+t+" unused characters has been removed. */\n"+a.replace(/</g,"&lt;").replace(/>/g,"&gt;"),highlightCode(hr)}function beautifyCSS(e){sc.checked=!1,sa.checked=!1,bi.checked=!1,compressCSS("cssField");var c=get(e),n=/\n@(media|-w|-m|-o|keyframes|page)(.*?)\{([\s\S]+?)?\}\n\}/gi,a=c.value;il.checked?a=(a=(a=(a=(a=a.replace(/;/g,"; ")).replace(/\{(.*?)\}/g," { $1; }")).replace(/\}\}/g,"}\n}")).replace(n,function(e){return e.replace(/\n/g,"\n    ").replace(/\n+\s+\n/g,"\n").replace(/\}\n\s+\}/g,"}\n}")})).replace(/\{(.*?)\{(.*?):(.*?)\}\n/g,"{\n     $1 { $2:$3}\n"):(a=(a=(a=(a=a.split(";").join(";\n  ")).split("{").join(" {\n  ")).split("}").join(";\n}\n")).replace(/\}([\n\s;]+?)?\}/g,"}\n}"),a=(a=(a=bs.checked?a.replace(/\n(.*?)\{/g,function(e){return e.replace(/,/g,",\n")}):a).replace(/@([\s\S]+?)\{/g,function(e){return e.replace(/,\n/g,", ")})).replace(n,function(e){return e.replace(/\n/g,"\n  ").replace(/\n\s+\n/g,"\n").replace(/\}\n+\s+\}/g,"}\n}")})),a=a.replace(/\{\n  ;\n\}|\{ ; \}/g,"{}"),a=sb.checked?a.replace(/\{([\s\S]+?)\}|\((.*?)\)/gm,function(e){return e.replace(/(,|\:)/g,"$1 ")}):a,a=(a=(a=(a=sb.checked?a.replace(/(.*?)\{/g,function(e){return e.replace(/,/g,", ")}):a).replace(/\!important/g," !important")).replace(/data: ?image(.*?);([\n\r\t\s]+)base64, ?/g,"data:image$1;base64,")).replace(/\n\s+@(.*?)\{\n    /g,"\n\n@$1{\n  "),a=ip.checked?a.replace(/(.*){(\n\s+|\t)(.*)\:(.*);\n(\s+)?}/g,"$1{$3:$4;}"):a,a=rs.checked?a.replace(/\{(.*?)\;(\s+)?\}/g,"{$1$2}"):a,a=tt.checked&&to[0].checked?a.split(/  /).join("\t"):a,a=tt.checked&&to[1].checked?a.split(/  /).join("    "):a,a=il.checked?a.replace(n,function(e){return e.replace(/\}/g,"} ")}):a,a=(a=si.checked?a.replace(/(\}|\*\/)\n+/g,"$1\n").replace(/\/\*/g,"\n/*"):a.replace(/\*\/\n(.)/g,"*/\n\n$1")).replace(/(^\n+|\n+$)/,""),bs.disabled=!!il.checked,ip.disabled=!!il.checked,tt.disabled=!!il.checked,to[0].disabled=!(tt.checked&&!il.checked),to[1].disabled=!(tt.checked&&!il.checked),c.value=a,hr.innerHTML=a.replace(/</g,"&lt;").replace(/>/g,"&gt;"),highlightCode(hr)}function clearField(e){var c=get(e);c.value="",c.focus()}function selectAll(e){get(e).focus(),get(e).select()}</script>
